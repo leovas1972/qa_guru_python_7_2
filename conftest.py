@@ -6,7 +6,7 @@ from selenium import webdriver
 def config_browser():
     driver = webdriver.Chrome()
     browser.config.driver = driver
-    browser.open('https://google.com')
-    driver.set_window_size(1920, 1080)
+    browser.config.window_width = 1920
+    browser.config.window_height = 1080
     yield
     browser.quit()
